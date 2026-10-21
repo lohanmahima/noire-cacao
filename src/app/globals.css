@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors — Luxury Off-White / Alabaster Editorial Palette */
+  --color-bg: #FAF7F2;
+  --color-bg-alt: #F4EFE6;
+  --color-surface: #FFFFFF;
+  --color-surface-warm: #F6F1EA;
+  --color-surface-card: #FFFFFF;
+  --color-cocoa: #1A0F0A;
+  --color-espresso: #2A170E;
+  --color-gold: #B88E38;
+  --color-gold-light: #C9A84C;
+  --color-gold-rich: #9E7422;
+  --color-ivory: #FAF7F2;
+  --color-caramel: #A0522D;
+
+  /* Semantic tokens */
+  --color-text: #1A0F0A;
+  --color-text-muted: #5C4C42;
+  --color-text-light: #8A796F;
+  --color-accent: #B88E38;
+  --color-border: rgba(184, 142, 56, 0.28);
+  --color-border-subtle: rgba(184, 142, 56, 0.16);
+
+  /* Typography */
+  --font-serif: var(--font-playfair, 'Playfair Display', Georgia, serif);
+  --font-sans: var(--font-inter, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #1A0F0A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF7F2;
+    color: #1A0F0A;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+    color: #1A0F0A;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #2D2018;
+  }
+}
+
+/* Subtle luxury grain effect overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(184, 142, 56, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9A84C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9E7422;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Selection */
+::selection {
+  background: #1A0F0A;
+  color: #FAF7F2;
+}
+
+/* Hide Next.js Dev Badges, Turbopack Indicator & Extension Overlays */
+#nextjs-dev-indicator,
+[data-nextjs-indicator],
+[data-nextjs-dev-indicator],
+[data-nextjs-toast],
+[data-nextjs-route-announcer],
+nextjs-portal,
+div[hidden][bis_skin_checked] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
