@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { assetPath } from '@/utils/assetPath';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
@@ -34,7 +35,7 @@ export default function Home() {
         className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none"
       >
         <Image
-          src="/images/background/cacao-atelier-bg.jpg"
+          src={assetPath('/images/background/cacao-atelier-bg.jpg')}
           alt="Atmospheric Cacao Atelier Background"
           fill
           priority

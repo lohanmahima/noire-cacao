@@ -1,4 +1,5 @@
 import { Product } from '@/types/product';
+import { assetPath } from '@/utils/assetPath';
 
 export const products: Product[] = [
   {
@@ -14,7 +15,7 @@ export const products: Product[] = [
     ingredients: ['Cacao beans', 'Organic cane sugar', 'Cacao butter', 'Sea salt'],
     color: '#1A0A05',
     type: 'dark',
-    image: '/images/curated/products/obsidian-72.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/products/obsidian-72.jpg?v=cacao-v2'),
   },
   {
     id: 'golden-praline',
@@ -29,7 +30,7 @@ export const products: Product[] = [
     ingredients: ['Cacao beans', 'Hazelnuts', 'Sugar', 'Butter', 'Edible gold', 'Sea salt'],
     color: '#8B6914',
     type: 'praline',
-    image: '/images/curated/products/golden-praline.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/products/golden-praline.jpg?v=cacao-v2'),
   },
   {
     id: 'velvet-caramel',
@@ -44,7 +45,7 @@ export const products: Product[] = [
     ingredients: ['Cacao beans', 'Milk', 'Sugar', 'Butter', 'Sea salt', 'Vanilla'],
     color: '#A0522D',
     type: 'caramel',
-    image: '/images/curated/products/velvet-caramel.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/products/velvet-caramel.jpg?v=cacao-v2'),
   },
   {
     id: 'ivory-silk',
@@ -58,6 +59,6 @@ export const products: Product[] = [
     ingredients: ['Cacao butter', 'Milk', 'Sugar', 'Vanilla', 'Bergamot oil'],
     color: '#F5EDD6',
     type: 'white',
-    image: '/images/curated/products/ivory-silk.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/products/ivory-silk.jpg?v=cacao-v2'),
   },
 ];

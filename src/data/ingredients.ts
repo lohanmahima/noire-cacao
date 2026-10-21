@@ -1,4 +1,5 @@
 import { Ingredient } from '@/types/product';
+import { assetPath } from '@/utils/assetPath';
 
 export const ingredients: Ingredient[] = [
   {
@@ -9,7 +10,7 @@ export const ingredients: Ingredient[] = [
     origin: 'Ecuador, Madagascar, Peru',
     characteristics: ['Fruity', 'Complex', 'Earthy', 'Floral'],
     meshType: 'sphere',
-    image: '/images/curated/ingredients/cacao-beans.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/cacao-beans.jpg?v=cacao-v2'),
   },
   {
     id: 'cacao-butter',
@@ -19,7 +20,7 @@ export const ingredients: Ingredient[] = [
     origin: 'Esmeraldas, Ecuador',
     characteristics: ['Smooth', 'Rich', 'Aromatic'],
     meshType: 'cylinder',
-    image: '/images/curated/ingredients/cacao-butter.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/cacao-butter.jpg?v=cacao-v2'),
   },
   {
     id: 'vanilla',
@@ -29,7 +30,7 @@ export const ingredients: Ingredient[] = [
     origin: 'Tahiti, French Polynesia',
     characteristics: ['Floral', 'Fruity', 'Sweet', 'Complex'],
     meshType: 'cylinder',
-    image: '/images/curated/ingredients/vanilla.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/vanilla.jpg?v=cacao-v2'),
   },
   {
     id: 'sea-salt',
@@ -39,7 +40,7 @@ export const ingredients: Ingredient[] = [
     origin: 'Guérande, France',
     characteristics: ['Mineral', 'Bright', 'Crystalline'],
     meshType: 'box',
-    image: '/images/curated/ingredients/sea-salt.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/sea-salt.jpg?v=cacao-v2'),
   },
   {
     id: 'hazelnuts',
@@ -49,7 +50,7 @@ export const ingredients: Ingredient[] = [
     origin: 'Piedmont, Italy',
     characteristics: ['Buttery', 'Nutty', 'Sweet', 'Toasted'],
     meshType: 'sphere',
-    image: '/images/curated/ingredients/hazelnuts.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/hazelnuts.jpg?v=cacao-v2'),
   },
   {
     id: 'gold',
@@ -59,6 +60,6 @@ export const ingredients: Ingredient[] = [
     origin: 'Certified European Atelier',
     characteristics: ['Lustrous', 'Pure', 'Elegant'],
     meshType: 'box',
-    image: '/images/curated/ingredients/gold.jpg?v=cacao-v2',
+    image: assetPath('/images/curated/ingredients/gold.jpg?v=cacao-v2'),
   },
 ];

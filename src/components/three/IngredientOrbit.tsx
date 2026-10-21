@@ -8,6 +8,7 @@ import { Ingredient } from '@/types/product';
 import WebGLErrorBoundary from './WebGLErrorBoundary';
 import { usePerformanceTier } from '@/hooks/usePerformanceTier';
 import { Play, Pause, RefreshCw } from 'lucide-react';
+import { assetPath } from '@/utils/assetPath';
 
 interface IngredientOrbitProps {
   ingredients?: Ingredient[];
@@ -263,7 +264,7 @@ function CelestialRealOrbitScene({
                   origin: '',
                   characteristics: [],
                   meshType: 'sphere',
-                  image: `/images/lab/tokens/${item.id}.png`,
+                  image: assetPath(`/images/lab/tokens/${item.id}.png`),
                 });
               }}
             />
@@ -280,7 +281,7 @@ function CentralDiamondToken() {
 
   useEffect(() => {
     const loader = new THREE.TextureLoader();
-    loader.load('/images/lab/tokens/diamond.png', (tex) => {
+    loader.load(assetPath('/images/lab/tokens/diamond.png'), (tex) => {
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.minFilter = THREE.LinearFilter;
       tex.magFilter = THREE.LinearFilter;
@@ -355,7 +356,7 @@ function OrbitingRealItemNode({
   // Load the circular real image token cropped from the user's generated image
   useEffect(() => {
     const loader = new THREE.TextureLoader();
-    loader.load(`/images/lab/tokens/${id}.png`, (tex) => {
+    loader.load(assetPath(`/images/lab/tokens/${id}.png`), (tex) => {
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.minFilter = THREE.LinearFilter;
       tex.magFilter = THREE.LinearFilter;
