@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { assetPath } from '@/utils/assetPath';
 
 export default function OriginSection() {
   const [activeStep, setActiveStep] = useState(0);
@@ -14,7 +15,7 @@ export default function OriginSection() {
       description:
         'We harvest solely heirloom Nacional Arriba trees cultivated under canopy shade in regenerative Ecuadorian agroforests. Each pod is hand-cut with curved machetes strictly at peak brix maturity.',
       metric: '100% Heirloom Nacional',
-      image: '/images/journal/esmeraldas.jpg',
+      image: assetPath('/images/journal/esmeraldas.jpg'),
     },
     {
       number: '02',
@@ -24,7 +25,7 @@ export default function OriginSection() {
       description:
         'Beans rest within fragrant indigenous laurel wood boxes wrapped in wild banana leaves. Native yeasts naturally ferment the sweet white mucilage, elevating core precursor polyphenols and eliminating astringent bitterness.',
       metric: '52°C Peak Thermal Curve',
-      image: '/images/curated/ingredients/cacao-beans.jpg?v=cacao-v2',
+      image: assetPath('/images/curated/ingredients/cacao-beans.jpg?v=cacao-v2'),
     },
     {
       number: '03',
@@ -34,7 +35,7 @@ export default function OriginSection() {
       description:
         'Never scorched. Low-and-slow convection roasting preserves floral monoterpenes and volatile fruit notes that industrial high-heat roasters destroy. Every harvest batch receives a custom temperature profile.',
       metric: '118°C Controlled Roast',
-      image: '/images/journal/flavor-wheel.jpg',
+      image: assetPath('/images/journal/flavor-wheel.jpg'),
     },
     {
       number: '04',
@@ -44,7 +45,7 @@ export default function OriginSection() {
       description:
         'Granite millstones crush roasted nibs for three continuous days and nights. Pure friction aerates volatile acids and shears particles down below 18 microns — the threshold where the human tongue perceives pure liquid silk.',
       metric: '< 18 Microns Texture',
-      image: '/images/curated/ingredients/cacao-butter.jpg?v=cacao-v2',
+      image: assetPath('/images/curated/ingredients/cacao-butter.jpg?v=cacao-v2'),
     },
     {
       number: '05',
@@ -54,7 +55,7 @@ export default function OriginSection() {
       description:
         'The silent choreography of thermal physics. Precise temperature cycling from 45°C down to 27°C and resting at 31.5°C stabilizes pure Form V beta crystals, imparting our legendary acoustic snap and mirror-like obsidian sheen.',
       metric: 'Form V Beta Crystals',
-      image: '/images/journal/tempering.jpg',
+      image: assetPath('/images/journal/tempering.jpg'),
     },
   ];
 

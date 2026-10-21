@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Sparkles, Eye, Box } from 'lucide-react';
+import { assetPath } from '@/utils/assetPath';
 
 const ExperienceCanvas = dynamic(() => import('../three/ExperienceCanvas'), {
   ssr: false,
@@ -115,7 +116,7 @@ export default function HeroSection() {
               ) : (
                 <div className="w-full h-full relative group">
                   <img
-                    src="/images/hero-chocolate-bars.jpg"
+                    src={assetPath('/images/hero-chocolate-bars.jpg')}
                     alt="Artisanal Dark & White Chocolate Bars on Stoneware Plate with Gold Cocoa Spoon"
                     className="w-full h-full object-cover"
                   />

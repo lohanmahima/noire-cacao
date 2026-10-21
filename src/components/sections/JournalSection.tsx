@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { journalPosts } from '@/data/journal';
 import { X, BookOpen, Clock } from 'lucide-react';
+import { assetPath } from '@/utils/assetPath';
 
 export default function JournalSection() {
   const [activeArticle, setActiveArticle] = useState<typeof journalPosts[0] | null>(null);
@@ -56,7 +57,7 @@ export default function JournalSection() {
               {/* Real Photography Header */}
               <div className="w-full h-56 mb-6 overflow-hidden relative border border-[var(--color-border-subtle)] bg-[#EDE5D8]">
                 <img
-                  src={post.image || '/images/journal/tempering.jpg'}
+                  src={post.image || assetPath('/images/journal/tempering.jpg')}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700"
                 />
@@ -115,7 +116,7 @@ export default function JournalSection() {
 
             <div className="w-full h-64 mb-6 overflow-hidden border border-[var(--color-border)] bg-[#EDE5D8]">
               <img
-                src={activeArticle.image || '/images/journal/tempering.jpg'}
+                src={activeArticle.image || assetPath('/images/journal/tempering.jpg')}
                 alt={activeArticle.title}
                 className="w-full h-full object-cover"
               />

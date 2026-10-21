@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { assetPath } from '@/utils/assetPath';
 
 const TastingCanvas = dynamic(() => import('../three/TastingCanvas'), {
   ssr: false,
@@ -270,7 +271,7 @@ export default function TastingSection() {
               <div className="flex items-center gap-3">
                 <div className="relative w-12 h-12 rounded border border-[#C9A84C]/60 overflow-hidden flex-shrink-0">
                   <Image
-                    src="/images/tasting/acoustic-snap-cacao.jpg"
+                    src={assetPath('/images/tasting/acoustic-snap-cacao.jpg')}
                     alt="Artisan snapped chocolate bar and cacao beans"
                     fill
                     sizes="48px"
@@ -345,7 +346,7 @@ export default function TastingSection() {
               ) : (
                 <div className="relative w-full h-full bg-[#1A0F0A] flex items-center justify-center">
                   <Image
-                    src="/images/tasting/acoustic-snap-cacao.jpg"
+                    src={assetPath('/images/tasting/acoustic-snap-cacao.jpg')}
                     alt="Acoustic chocolate fracture with scattered cacao beans and molten chocolate bowl"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
